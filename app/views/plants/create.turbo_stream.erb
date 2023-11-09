@@ -1,0 +1,6 @@
+<%= turbo_stream.prepend "plants" do %>
+  <%= render "plant", plant: @plant %>
+<% end %>
+<%= turbo_stream.replace "#{dom_id(Plant.new)}" do %>
+  <%= render plant: Plant.new %>
+<% end %>
